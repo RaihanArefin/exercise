@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <title>Exercise Tracker</title>
+        <style>
+            #user_input{
+                background-color: darkkhaki;
+                width: 400px;
+                height: 500px;
+                margin-left: 90px;
+                border-radius: 50px;
+                padding-top: 150px;
+                border: 7px solid black;
+                box-shadow: 20px 20px 30px grey;
+            }
+            #exercise_input{
+                background-color: darksalmon;
+                width: 400px;
+                height: 500px;
+                margin-left: 800px;
+                margin-top: -500px;
+                border-radius: 50px;
+                padding-top: 50px;
+                border: 7px solid black;
+                box-shadow: 20px 20px 30px grey;
+            }
+            input{
+                width: 340px;
+                margin: 20px;
+                margin-top: 15px;
+                height: 50px;
+                border-radius: 50px;
+                padding: 5px;
+                border: 5px solid black;
+            }
+            button{
+                height: 50px;
+                margin-left: 160px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="text-center">Exercise Tracker</h1>
+        <form method="POST" action="/api/newUser" id="user_input">
+            <input type="text" name="user" placeholder="Enter your name....">
+            <br><button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <form method="POST" action="/api/newExercise"  id="exercise_input">
+            <input type="text" placeholder=" Enter your userId..." name="userId" required><br>
+            <input type="text" placeholder="Description" name="description" required><br>
+            <input type="date" placeholder="DD-MM-YYYY" name="date"><br>
+            <input type="text" placeholder="Duration(in Minute)" name="duration" required><br>
+            <button class="btn btn-primary" type="submit">Submit</button> 
+        </form>
+    </body>
+</html>
